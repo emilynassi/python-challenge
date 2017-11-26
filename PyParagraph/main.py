@@ -1,12 +1,12 @@
-
 f = open("paragraph.txt","r")
 passage = f.read() 
 
     #find approximate word count
 word_count = len(passage.split())
  
+separators = "." or "?" or "!"
     #find aproximate sentence count
-sentence_count = passage.count(".")
+sentence_count = passage.count(separators)
 
     #split up words by spaces
 words = passage.split()
