@@ -20,23 +20,28 @@ with open(budgetdata1) as csvfile:
 
         revenue.append(int(row[1]))
         date.append(row[0])
+        #add together entire revenue list
         total_revenue = sum(revenue)
+        #count length of date list
         total_months = len(date)
 
-    #Loop through revenue column and capture lenth of list
+    #Loop through revenue column 
     for values in range(1,len(revenue)):
+        
         #append changes in values to list
         revenue_change.append(revenue[values] - revenue[values-1])   
+       
         #calculate average change though sum of the entire list divided by length of list 
         average_change = sum(revenue_change)/len(revenue_change)
+        
         #find max in revenue_change list and store as variable
         max_change = max(revenue_change)
         #find min in revenue_change list and store as variable
         min_change = min(revenue_change)
 
-        #store corresponding dates
-        max_date = (date[revenue_change.index(max_change)])
-        min_date = (date[revenue_change.index(min_change)])
+        #store corresponding dates using index function
+        max_date = date[revenue_change.index(max_change)]
+        min_date = date[revenue_change.index(min_change)]
 
 
 #print to terminal
