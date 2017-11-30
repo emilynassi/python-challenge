@@ -1,19 +1,19 @@
 f = open("paragraph.txt","r")
 passage = f.read() 
 
-    #find approximate word count
+#find approximate word count
 word_count = len(passage.split())
  
 separators = "." or "?" or "!"
-    #find aproximate sentence count
+#find aproximate sentence count
 sentence_count = passage.count(separators)
 
-    #split up words by spaces
+#split up words by spaces
 words = passage.split()
-    #count characters in each word, add together and divide by amount of all words
+#count characters in each word, add together and divide by amount of all words
 character_count = sum(len(word) for word in words) / len(words)
 
-    #Calculate average sentence length
+#Calculate average sentence length
 average_word_per_sentence = word_count / sentence_count
 
 
