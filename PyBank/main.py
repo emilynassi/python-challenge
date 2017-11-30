@@ -43,7 +43,6 @@ with open(budgetdata1) as csvfile:
         max_date = date[revenue_change.index(max_change)]
         min_date = date[revenue_change.index(min_change)]
 
-
 #print to terminal
 
     print("Financial Analysis")
