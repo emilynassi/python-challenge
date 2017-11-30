@@ -1,8 +1,9 @@
+import re
 f = open("paragraph.txt","r")
 passage = f.read() 
 
 #find approximate word count
-word_count = len(passage.split())
+word_count = len(re.findall('\w+', passage))
  
 separators = "." or "?" or "!"
 #find aproximate sentence count
