@@ -81,7 +81,7 @@ with open(employeedata) as csvfile:
 
         #Add names to new columns
         first_name.append(namesplit[0])
-        last_name.append(namesplit[0])
+        last_name.append(namesplit[1])
 
         # rewrite DOB
         dob_old = datetime.strptime(row[2], "%Y-%m-%d")
